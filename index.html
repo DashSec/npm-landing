@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="home-body">
+  <header class="home-header">
+    <h1 class="home-title">Команды npm</h1>
+    <p class="home-description code">
+      npm — это пакетный менеджер node.js для управления модулями и зависимостями
+    </p>
+    <div class="home-actions">
+      <a href="https://www.npmjs.com/" class="home-action code">
+        Сайт NPM
+      </a>
+      <a href="https://habr.com/ru/articles/133363/" class="home-action code">
+        Статья на хабре
+      </a>
+    </div>
+  </header>
+
+  <main class="home-main">
+    <article class="home-article">
+      <section class="home-section">
+        <h2 class="home-subtitle">Установка Node.js</h2>
+          <ul class="home-section-list ">
+            <li class="home-li-item">- Зайдите на сайт nodejs.org в “Download”.</li>
+            <li class="home-li-item">- Перейдите в “Prebuilt Installer” и выберете Current или LTS версию</li>
+            <li class="home-li-item">- Скачайте файл и следуйте инструкциям по установке</li>
+          </ul>
+          <br>
+          <div class="home-section-info">
+            <p class="home-text">Команды помогают узнать версию Node.js</p> 
+            <p class="home-text">node -h — показывает список всех доступных команд Node.js.</p>
+            <p class="home-text">node -v — показывает установленную версию Node.js.</p>
+            <p class="home-text">npm -h — показывает список всех доступных команд пакетного менеджера npm.</p>
+            <p class="home-text">npm -v — показывает установленную версию npm.</p>
+            <p class="home-text">Команда npm update npm -g позволяет обновить версию npm.</p>
+          </div>
+      </section>
+      <section class="home-section">
+        <h2 class="home-subtitle">Установка и удаление пакетов</h2>
+        <div class="code">npm install package</div>
+        <p class="home-text">Позволяет установить любой пакет по его имени.
+            Если при этом к команде добавить префикс -g пакет будет установлен  глобально на весь компьютер.
+            Если вы хотите установить конкретную версию пакета, воспользуйтесь префиксом @ с номером версии.
+            Например, npm install package@1.0.1.</p>
+            
+        <div class="code">npm uninstall package</div>
+        <p class="home-text">Удаляет установленный пакет по имени.</p>
+        <p class="home-text">Команда npm list package — покажет версию установленного пакета, 
+              а команда npm view package version — последнюю версию пакета, которая существует.</p>
+      </section>
+      <section class="home-section">
+        <h2 class="home-subtitle">Работа с пакетами в проекте</h2>
+        <p class="home-text">Все установленные пакеты и доступные скрипты находятся в файле package.json. 
+            Этот файл должен находится в директории проекта и сожержит мета-данные (имя проекта, версия, автор). 
+            Чтобы установить зависимости, необходимые для запуска проекта, используем команду npm install в этой папке.</p>
+            <br>
+        <p class="home-text">Для работы с проектом используем скрипты для запуска проекта в режиме разработки npm start, 
+            для сборки билда - npm run build.</p>
+            <br>
+        <p class="home-text">Во время работы часто возникает необходимость установить некоторые пакеты. 
+            Если установить пакет с префиксом --save, то он автоматически запишется в package.json в раздел dependencies. 
+            Такая же команда с префиксом --save-dev запишет пакет в раздел devDependencies.</p>
+      </section>
+    </article>
+  </main>
+
+
+  <footer class="home-footer">
+    <a href="https://github.com/DashSec" class="footer-github-link" target="_blank" rel="noopener noreferrer">
+    <img src="srcimg/git-logo.png" alt="Гитхаб логотип" width="50px"/>
+    </a>
+  </footer>
+</body>
+</html>
